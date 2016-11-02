@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.iwenk.tankwar.Direction" x="404" y="27">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.Explode" x="872" y="684">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.iwenk.tankwar.TankWar"
+            endpointName="tWar" kind="Simple"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.Tank" x="693" y="230">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.iwenk.tankwar.Direction"
+            endpointName="dir" kind="Simple"/>
+        <Association destinationClassName="com.iwenk.tankwar.TankWar"
+            endpointName="tw" kind="Simple"/>
+        <Association destinationClassName="com.iwenk.tankwar.Direction"
+            endpointName="bulletDirection" kind="Simple"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.TankWar.KeyMonitor" x="1289" y="107">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.iwenk.tankwar.HeroTank"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.TankWar.PaintTread" x="1389" y="412">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.TankWar" x="334" y="664">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.iwenk.tankwar.HeroTank"
+            endpointName="hero" kind="Simple"/>
+        <Communication destinationClassName="com.iwenk.tankwar.Explode"/>
+        <Communication destinationClassName="com.iwenk.tankwar.Tank"/>
+        <Communication destinationClassName="com.iwenk.tankwar.HeroTank"/>
+        <Communication destinationClassName="com.iwenk.tankwar.BUllet"/>
+        <Communication destinationClassName="com.iwenk.tankwar.Tool"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.EnemyTank" x="1088" y="28">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.iwenk.tankwar.Tank"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.HeroTank" x="1040" y="332">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="com.iwenk.tankwar.Tank"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.BUllet" x="336" y="340">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.iwenk.tankwar.TankWar"
+            endpointName="tWar" kind="Simple"/>
+        <Association destinationClassName="com.iwenk.tankwar.Direction"
+            endpointName="dir" kind="Simple"/>
+    </Class>
+    <Class name="com.iwenk.tankwar.Tool" x="280" y="24">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="com.iwenk.tankwar.Direction"
+            endpointName="direction[]" kind="Simple"/>
+        <Communication destinationClassName="com.iwenk.tankwar.Direction"/>
+    </Class>
+</ClassDiagram>
